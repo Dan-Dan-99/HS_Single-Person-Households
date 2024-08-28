@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seoul</title>
+    <style>
+        .d-day {
+            color: #FF0000; /* 텍스트 색상을 빨간색으로 설정 */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9; /* 배경색 */
+            margin: 0;
+            padding: 0;
+            color: #333; /* 텍스트 색상 */
+        }
+        h1 {
+            background-color: #2c3e50; /* 헤더 배경색 */
+            color: #ecf0f1; /* 헤더 텍스트 색상 */
+            padding: 20px;
+            text-align: center;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            margin: 20px;
+            position: relative;
+            min-height: 300px; /* 충분한 높이를 확보하여 이미지가 아래쪽에 위치하도록 합니다. */
+        }
+        .image {
+            position: relative;
+            margin-top: 100px; /* 위쪽에 공간을 추가하여 상자와 이미지 사이에 여백을 만듭니다. */
+            margin-bottom: 100px; /* 아래쪽에 공간을 추가하여 이미지와 상자 사이에 여백을 만듭니다. */
+        }
+        .image img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .box {
+            display: inline-block;
+            text-decoration: none;
+            color: #ecf0f1; /* 링크 텍스트 색상 */
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: #2c3e50; /* 상자 배경색 */
+            border: 2px solid #2c3e50; /* 상자 테두리 색상 */
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            margin-top: 40px; /* 상자를 아래로 내리기 위한 마진 */
+        }
+        .box:hover {
+            background-color: #34495e; /* 상자 호버 배경색 */
+        }
+    </style>
+</head>
+<body>
+    <h1>Seoul</h1>
+    <!-- Back Button -->
+    <div style="padding: 10px;">
+        <button onclick="history.back()" style="padding: 10px 20px; background-color: #2c3e50; color: white; border: none; border-radius: 5px; cursor: pointer;">Back</button>
+    </div>
+    <div class="container">
+        <div class="image">
+            <img src="{{ url_for('static', filename='Seoul_image.png') }}" alt="Descriptive Alt Text">
+        </div>
+        <a href="{{ url_for('Seoul_SPH') }}" class="box">서울 1인가구 복지 살펴보기</a>
+    </div>
+</body>
+</html>
